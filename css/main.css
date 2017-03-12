@@ -1,0 +1,401 @@
+/** General **/
+
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+html {
+    font-size: 100%;
+    height: 100%;
+}
+
+body {
+    background: rgb(255, 255, 255);
+    background: #ffffff;
+    overflow: hidden;
+}
+
+article {
+    width: 100%;
+    height: auto;
+}
+
+img {
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.centerVertical {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+
+/** Typography **/
+
+.serif {
+    /*font-family: 'Anton', sans-serif;*/
+    font-family: 'Droid Serif', serif;
+}
+
+.sanSerif {
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.white {
+    color: white;
+    text-shadow: 1px 1px 5px #2b2e39;
+}
+
+.regFont {
+    font-size: 1rem;
+}
+
+.mediumFont {
+    font-size: 1.5rem;
+}
+
+.bigFont {
+    font-size: 2.5rem;
+}
+
+.wordSpacing {
+    word-spacing: 1px;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+
+/** Navigation-Header **/
+
+nav {
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+nav a,
+nav a:visited,
+nav a:hover,
+nav a:active {
+    color: white;
+    background: rgb(51, 51, 51);
+    background: #333333;
+    text-decoration: none;
+    box-shadow: 0 1px 10px rgba(43, 46, 57, 0.2);
+    z-index: 95;
+    width: 100%;
+    height: 25%;
+    display: block;
+}
+
+nav a:first-child {
+    background: rgb(8, 103, 136);
+    background: #086788;
+    z-index: 98;
+}
+
+nav a:nth-child(2) {
+    background: rgb(222, 79, 79);
+    background: #de4f4f;
+    z-index: 97;
+}
+
+nav a:nth-child(3) {
+    background: rgb(255, 200, 37);
+    background: #ffc825;
+    z-index: 96;
+}
+
+nav a:nth-child(4) {
+    box-shadow: none;
+}
+
+header {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: rgb(255, 255, 255);
+    background: #ffffff;
+    box-shadow: 0 1px 10px rgba(43, 46, 57, 0.2);
+}
+
+
+/* navBtn from codepen user "teppeis" http://codepen.io/teppeis/pen/Dbcrd?editors=1100 */
+
+#navBtn {
+    z-index: 100;
+    padding: 0;
+}
+
+#navHeader {
+    z-index: 98;
+    float: right;
+    margin-right: 5%;
+    line-height: 45px;
+    display: block;
+}
+
+.gh-svg-wrapper {
+    display: block;
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    transform: translateZ(0) rotate(0deg);
+    transition: transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.gh-svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateZ(0) rotate(0deg);
+    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.gh-svg-rect {
+    left: 0;
+    top: 0;
+    transition: transform 0.2s 0.2s;
+}
+
+.gh-svg-rect-top {
+    transform: translate3d(0, -8px, 0);
+}
+
+.gh-svg-rect-bottom {
+    transform: translate3d(0, 8px, 0);
+}
+
+
+/* navBtn from codepen user "teppeis" http://codepen.io/teppeis/pen/Dbcrd?editors=1100 */
+
+
+/* Sections */
+
+section {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 90%;
+    height: auto;
+    padding: 0 5%;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+section h2 {
+    margin: 1rem 0;
+}
+
+
+/* About Page */
+
+#aboutPage img {
+    width: 100%;
+    height: auto
+}
+
+
+/* Portfolio Page */
+
+#portfolioPage {
+    width: 100%;
+    padding: 0;
+}
+
+.portfolioBlock {
+    z-index: 98;
+    width: 100%;
+    height: 40%;
+    box-shadow: 0 1px 10px #2b2e39;
+    overflow-y: hidden;
+    background: white;
+}
+
+#portfolioModal h2 {
+    margin: 1rem 0;
+}
+
+.imgWrap {
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    overflow: hidden;
+}
+
+.imgWrap img {
+    width: 100%;
+    height: auto;
+}
+
+#portfolioModal {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 10%;
+    background: white;
+    overflow-y: scroll;
+}
+
+
+/* Resume */
+
+#resumePage h3 {
+    height: 45px;
+    line-height: 45px;
+}
+
+.block {
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+}
+
+.arrowDown {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid #000;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+/* Contact */
+
+form div {
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    display: block;
+    width: 100%
+}
+
+form input {
+    height: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+#sendMessage {
+    width: 100%;
+    height: 44px;
+    background: rgb(43, 46, 57);
+    background: #2b2e39;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+#contactPage ul {
+    width: 100%;
+    height: 45px;
+    text-align: center;
+}
+
+#contactPage li {
+    padding: 0 2.5%;
+    display: inline-block;
+}
+
+#contactPage img {
+    height: 45px;
+}
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 45px;
+    z-index: 98;
+    background: rgb(51, 51, 51);
+    background: #333333;
+}
+
+footer p {
+    margin: 0;
+    line-height: 45px;
+}
+
+
+/* Media Queries -----------*/
+
+@media only screen and (min-width: 768px) {
+    header {
+        height: 60px;
+    }
+    #navHeader {
+        line-height: 60px;
+    }
+    .gh-svg-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+    .bigFont {
+        font-size: 5.5rem;
+    }
+    #aboutPage h2 {
+        width: 45%;
+        margin-top: 2rem;
+        padding: 5rem 2.5%;
+        float: right;
+    }
+    #aboutPage img {
+        width: 50%;
+        margin: 2rem 0 1rem;
+    }
+    #portfolioModal,
+    .portfolioBlock {
+        width: 50%;
+    }
+    .portfolioBlock:nth-child(odd) {
+        float: right;
+    }
+    .portfolioBlock:nth-child(even) {
+        float: left;
+    }
+    .portfolioBlock:first-child {
+        width: 100%;
+    }
+    #portfolioModal {
+        top: 60px;
+    }
+}
